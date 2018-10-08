@@ -1,0 +1,2 @@
+1 roscore
+2 roslaunch autorace gazebo.launch

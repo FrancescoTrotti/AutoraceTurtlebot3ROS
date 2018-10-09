@@ -49,11 +49,4 @@
       <remap from="/detect/image_output_sub2/compressed" to="/detect/image_yellow_lane_marker/compressed" />
     </node>
 
-    <!-- lane control -->
-    <group if="$(eval calibration_mode == 'action')">
-      <node pkg="autorace" type="control_lane" name="control_lane" output="screen">
-        <remap from="/control/lane" to="/detect/lane" />
-        <remap from="/control/cmd_vel" to="cmd_vel" />
-      </node>
-    </group>
 </launch>

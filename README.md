@@ -12,8 +12,10 @@ Moreno Bragaglio VR423929
 - Clonare la repository di gitHub: git clone https://github.com/FrancescoTrotti/AutoraceTurtlebot3ROS.git
 - Compilare catkin: catkin_make
 - Aprire un terminale ed eseguire: roscore
-- Aprire un secondo terminale ed eseguire: roslaunch autorace gazebo.launch
-- Aprire un terzo terminale ed eseguire: roslaunch autorace autorace.launch
+- Aprire un secondo terminale ed eseguire: export TURTLEBOT3_MODEL=burger_pi
+- Sempre sul secondo terminale eseguire: roslaunch autorace gazebo.launch
+- Aprire un terzo terminale ed eseguire: export TURTLEBOT3_MODEL=burger_pi
+- Sempre sul terzo terminale eseguire: roslaunch autorace gazebo.launch
 
 ## Obiettivo:
 Il progetto consiste nel riprodurre il codice creato dalla ROBOTIC per l'autonomous drive del turtlebot3. Questo deve seguire un 

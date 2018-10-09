@@ -1,6 +1,6 @@
 # Progetto Cyberfisico
 ## Autonomous drive turtlebot3
-Francesco Trotti VR398637 
+Francesco Trotti VR398637 <br>
 Moreno Bragaglio VR423929
 
 ## Prerequisiti

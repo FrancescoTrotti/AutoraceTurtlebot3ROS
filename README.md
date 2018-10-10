@@ -18,11 +18,11 @@ Moreno Bragaglio VR423929
 - Sempre sul terzo terminale eseguire: roslaunch autorace autorace.launch
 
 ## Obiettivo:
-Il progetto consiste nel riprodurre il codice creato dalla ROBOTIC per l'autonomous drive del turtlebot3. Questo deve seguire un 
+Il progetto consiste nel riprodurre il codice creato dalla ROBOTIS per l'autonomous drive del turtlebot3. Questo deve seguire un 
 percorso prestabilito limitato da due linee bianche e muovendosi in autonomia.
 
 ## Sviluppo:
-Abbiamo modificato il codice della ROBOTIC e selezionato solo i nodi essenziali per la la guida autonoma. 
+Abbiamo modificato il codice della ROBOTIS e selezionato solo i nodi essenziali per la la guida autonoma. 
 I nodi che abbiamo selezionato sono: <br>
 - image_projection.py <br>
 In questo nodo viene applicata una matrice di omografia hai frame catturati dalla camera del turtlebot3 così da eliminare la prospettiva delle linee create nei frame originali

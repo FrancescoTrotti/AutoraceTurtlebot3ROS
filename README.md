@@ -31,4 +31,4 @@ In questo codice è stata reimplementata la line detection utilizzando funzioni 
 creare una linea centrale (gialla) da seguire per il turtlebot3. Problema riscontrato è che la line detection fatta dalla funzione HoughLinesP() è probabilistica quindi ad ogni ciclo di codice il valore dei punti cambia 
 spostando la linea gialla, per ovviare questo problema abbiamo normalizzato i punti facendo la media tra i massimi e minimi dei punti e tracciata di nuovo la retta risultando cosi sempre al centro delle due righe bianche. <br>
 
-![Autorace turtlebot3 video demo](https://github.com/FrancescoTrotti/AutoraceTurtlebot3ROS/blob/master/Video/AutodriveTurtlebot3.mp4)
+![Autorace turtlebot3 video demo](https://drive.google.com/file/d/1N0VpxieBVTNEEMXPVaMwxylHk9UehXIT/view?usp=sharing)

@@ -40,6 +40,14 @@ class DetectLane():
             # subscribes raw image
             self.sub_image_original = rospy.Subscriber('/detect/image_input', Image, self.cbFindLane, queue_size = 1)
 
+        # topic per frame di output
+        #if self.pub_image_type == "compressed":
+            # publishes lane image in compressed type
+        #    self.pub_image_lane = rospy.Publisher('/detect/image_output/compressed', CompressedImage, queue_size = 1)
+        #elif self.pub_image_type == "raw":
+            # publishes lane image in raw type
+        #    self.pub_image_lane = rospy.Publisher('/detect/image_output', Image, queue_size = 1)
+
         self.cvBridge = CvBridge()
 
     def cbGetDetectLaneParam(self, config, level):
@@ -176,12 +184,20 @@ class DetectLane():
         # disegno della linea gialla
         cv2.line(line_image,(x_min_avg,y_min),(x_max_avg,y_max),(0,255,255))
         # svrappone le linee al frame
-        lines_edges = cv2.addWeighted(cv_image, 0.8, line_image, 1, 0)
-        cv2.imshow("linee edge", lines_edges)
+        final = cv2.addWeighted(cv_image, 0.8, line_image, 1, 0)
+        cv2.namedWindow('linee edge', cv2.WINDOW_NORMAL)
+        cv2.resizeWindow('linee edge', 600, 600)
+        cv2.imshow("linee edge", final)
         # esce dal ciclo di acqusizione
         if cv2.waitKey(1) & 0xFF == ord('q'):
             rospy.signal_shutdown('Quit')
 
+        # pubblicazione sui topic per visualizzare la detect.
+        #if self.pub_image_type == "compressed":
+        #    self.pub_image_lane.publish(self.cvBridge.cv2_to_compressed_imgmsg(final, "jpg"))
+
+        #elif self.pub_image_type == "raw":
+        #    self.pub_image_lane.publish(self.cvBridge.cv2_to_imgmsg(final, "bgr8"))
 
     def main(self):
         rospy.spin()

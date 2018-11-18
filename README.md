@@ -14,8 +14,7 @@ Moreno Bragaglio VR423929
 - Aprire un terminale ed eseguire: roscore
 - Aprire un secondo terminale ed eseguire: export TURTLEBOT3_MODEL=burger_pi
 - Sempre sul secondo terminale eseguire: roslaunch autorace gazebo.launch
-- Aprire un terzo terminale ed eseguire: export TURTLEBOT3_MODEL=burger_pi
-- Sempre sul terzo terminale eseguire: roslaunch autorace autorace.launch
+- Aprire un terzo terminale ed eseguire: roslaunch autorace autorace.launch
 
 ## Obiettivo:
 Il progetto consiste nel riprodurre il codice creato dalla ROBOTIS per l'autonomous drive del turtlebot3. Questo deve seguire un 
